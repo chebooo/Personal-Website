@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sebastian</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Gabarito:wght@500&display=swap");
+      body {
+        margin: 0;
+        background: #000000;
+        color: #ffffff;
+      }
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      #main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      .wrapper {
+        max-width: 800px;
+        padding: 32px;
+      }
+      .hero {
+        font-family: "AR One Sans", sans-serif;
+        font-size: 54px;
+        margin: 0;
+      }
+      .decription {
+        line-height: 36px;
+        font-size: 26px;
+        margin: 14px 0;
+        font-family: "Gabarito", cursive;
+      }
+      .url-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+      }
+      .url-container {
+        margin-right: 50px;
+      }
+      .list-entry {
+        font-family: "AR One Sans", sans-serif;
+        margin: 15px 0;
+      }
+      .list-pointer {
+        opacity: 0.5;
+      }
+      .list-entry,
+      .contact {
+        font-size: 22px;
+        font-family: "Gabarito", cursive;
+      }
+      @media only screen and (max-width: 600px) {
+        .hero span {
+          padding: 8px;
+        }
+        :not(.url-container ~ .url-container).url-container p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="wrapper">
+        <h1 class="hero">
+          Hi, I'm <span><i>Sebastian!</i></span>
+        </h1>
+        <p class="decription">
+          I'm a Computing student at the University of Huddersfield. I'm
+          currently in my final year of study.
+        </p>
+        <div class="url-wrapper">
+          <div class="url-container">
+            <p class="list-entry">
+              <span class="list-pointer">&#x2022;</span>
+              <span
+                >Twitter:
+                <a
+                  href="https://twitter.com/seboflacko"
+                  aria-label="Twiter"
+                  target="_blank"
+                  >@seboflacko</a
+                >
+              </span>
+            </p>
+            <p class="list-entry">
+              <span class="list-pointer">&#x2022;</span>
+              <span
+                >GitHub:
+                <a
+                  href="https://github.com/chebooo"
+                  aria-label="GitHub"
+                  target="_blank"
+                  >@chebooo</a
+                >
+              </span>
+            </p>
+            <p class="list-entry">
+              <span class="list-pointer">&#x2022;</span>
+              <span
+                >Discord:
+                <a
+                  href="https://discordapp.com/users/508349503938494495"
+                  aria-label="Discord"
+                  target="_blank"
+                  >@seboflacko</a
+                >
+              </span>
+            </p>
+            <p class="list-entry">
+              <span class="list-pointer">&#x2022;</span>
+              <span
+                >Linkedin:
+                <a
+                  href="https://www.linkedin.com/in/sebastian-astalos-56b149223/"
+                  aria-label=""
+                  target="_blank"
+                  >@sebastianastalos</a
+                >
+              </span>
+            </p>
+          </div>
+        </div>
+        <p class="contact">
+          Contact me:
+          <a href="mailto:seebastian2002@outlook.com" aria-label="Email"
+            >seebastian2002@outlook.com</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#main",
+        mouseControls: false,
+        touchControls: false,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0xe11b32,
+        backgroundColor: 0x0,
+        maxDistance: 23.0,
+        spacing: 18.0,
+      });
+    </script>
+  </body>
+</html>
