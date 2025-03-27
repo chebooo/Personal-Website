@@ -1,0 +1,388 @@
+/* About Page Specific Styles */
+
+.about-section {
+  padding-bottom: 3rem; /* Add some padding at the bottom */
+}
+
+.about-section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: var(--text-color-strong);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  gap: 2.5rem; /* Space between sections */
+  max-width: 800px; /* Limit width of the about content area */
+}
+
+.about-text {
+  /* Styles for the main intro text */
+}
+
+.about-text h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-strong);
+}
+
+.job-title {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-details p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  /* max-width: 800px; /* Removed, handled by about-content */
+}
+.about-details p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: 2.5rem;
+}
+
+.skills-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-family: var(--font-family-heading); /* Assuming you have this variable */
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  /* max-width: 800px; /* Removed, handled by about-content */
+}
+
+.skill-tag {
+  background-color: var(--tag-bg);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  border: 1px solid var(--tag-border);
+  font-weight: 500;
+  display: inline-flex; /* Align icon and text */
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-secondary); /* Adjust text color on hover */
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-tag i {
+  font-size: 1rem; /* Adjust icon size if needed */
+}
+
+/* Hardware Section */
+.hardware-section {
+  margin-bottom: 2.5rem;
+}
+
+.hardware-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-family: var(--font-family-heading);
+}
+
+.hardware-list {
+  list-style: none;
+  padding: 0;
+  /* max-width: 800px; /* Removed, handled by about-content */
+  display: grid; /* Use grid for better alignment */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive columns */
+  gap: 1rem;
+}
+
+.hardware-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.hardware-list li:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--primary-color); /* Highlight text on hover */
+}
+body:not(.light-theme) .hardware-list li:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hardware-list i {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  width: 20px; /* Fixed width for alignment */
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.hardware-list li:hover i {
+  color: var(--primary-color); /* Highlight icon on hover */
+}
+
+/* --- Experience & Education Section (Replaces Timeline) --- */
+
+.timeline-section {
+  margin-bottom: 2.5rem;
+  padding-top: 1rem; /* Add some space above the title */
+}
+
+.timeline-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-family: var(--font-family-heading);
+  text-align: left; /* Align title to the left */
+}
+
+.timeline-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between stacked items */
+}
+
+.timeline-item {
+  /* This is the outer wrapper for each card */
+  position: relative; /* Needed if you want to add pseudo-elements later */
+}
+
+/* The actual content card */
+.timeline-item .content {
+  padding: 20px 30px;
+  background-color: var(--card-bg); /* Use card background */
+  position: relative;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  /* max-width: 800px; /* Removed, handled by about-content */
+}
+body:not(.light-theme) .timeline-item .content {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item .content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+body:not(.light-theme) .timeline-item .content:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item .content h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem; /* Adjusted size */
+  color: var(--text-color-strong);
+  font-family: var(--font-family-heading);
+}
+
+.timeline-item .content p {
+  margin: 0.5rem 0; /* Add spacing between paragraphs */
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.timeline-item .content p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item .content .timeline-place {
+  color: var(--primary-color); /* Use primary color for place */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.timeline-item .content .timeline-date {
+  color: var(--secondary-color); /* Use secondary color for date */
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 0.8rem; /* Add space below date */
+}
+
+/* Styles for the timeline logos */
+.timeline-logo {
+  width: 3.5rem; /* Size */
+  height: 3.5rem;
+  object-fit: contain; /* Ensure logo fits without distortion */
+  background-color: #ffffff; /* White background for visibility */
+  padding: 0.3rem; /* Add some padding around the logo */
+  border-radius: var(--border-radius); /* Consistent border radius */
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem; /* Space below the logo */
+  /* Position logo to the right */
+  float: right;
+  margin-left: 1rem; /* Space between logo and text */
+}
+
+/* Clearfix for the content block because float is used for logo */
+.timeline-item .content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style for the moved grade */
+.timeline-grade {
+  font-size: 0.9rem;
+  font-weight: 600; /* Make it slightly bolder */
+  color: var(--secondary-color); /* Use secondary color or primary */
+  margin-top: 0.2rem; /* Add a little space above */
+  margin-bottom: 0.5rem; /* Add space below */
+}
+
+/* Specific styling for logos (examples) */
+.hudds-logo {
+  /* Add specific overrides if needed */
+}
+.hst-logo {
+  /* Add specific overrides if needed */
+}
+
+/* Experience and Education Box Styles */
+.experience-box {
+  /* Specific styles for experience box if needed */
+}
+
+.education-box {
+  /* Specific styles for education box if needed */
+}
+
+/* NEW: Style for job description list */
+.job-description-list {
+  list-style: disc; /* Use standard bullet points */
+  padding-left: 20px; /* Indent the list */
+  margin-top: 0.8rem; /* Add space above the list */
+  font-size: 0.9rem; /* Match paragraph font size */
+  color: var(--text-color);
+}
+
+.job-description-list li {
+  margin-bottom: 0.4rem; /* Space between list items */
+}
+/* --- End Experience & Education Section --- */
+
+/* Contact Section Styles */
+.contact-section {
+  margin-bottom: 2.5rem; /* Consistent spacing */
+}
+
+.contact-section h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-family: var(--font-family-heading);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Space between contact items */
+}
+
+.contact-list li {
+  /* Optional: Add styling per list item if needed */
+}
+
+.contact-list li a {
+  display: inline-flex; /* Align icon and text nicely */
+  align-items: center;
+  gap: 0.7rem; /* Space between icon and text */
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.contact-list li a i {
+  font-size: 1.2rem; /* Adjust icon size */
+  width: 20px; /* Ensure icons align */
+  text-align: center;
+  color: var(--secondary-color); /* Use secondary color for icons initially */
+  transition: color 0.3s ease;
+}
+
+.contact-list li a:hover i {
+  color: var(--primary-color); /* Change icon color on link hover */
+}
+
+/* Responsive adjustments for About page */
+@media (max-width: 768px) {
+  .about-section h1 {
+    font-size: 2rem;
+  }
+  .about-text h2 {
+    font-size: 1.4rem;
+  }
+  .skills-section h3,
+  .hardware-section h3,
+  .timeline-section h3,
+  .contact-section h3 {
+    /* Include contact section heading */
+    font-size: 1.3rem;
+  }
+  .hardware-list {
+    grid-template-columns: 1fr; /* Stack hardware items */
+  }
+
+  /* Adjust logo position on smaller screens */
+  .timeline-logo {
+    float: none; /* Remove float */
+    margin-left: 0; /* Reset margin */
+    margin-bottom: 1rem; /* Keep bottom margin */
+    display: block; /* Ensure it's still block */
+    width: 3rem; /* Slightly smaller */
+    height: 3rem;
+  }
+  /* Ensure content clears properly without float */
+  .timeline-item .content::after {
+    display: none; /* Not needed if float is removed */
+  }
+
+  /* Adjust padding for timeline content on smaller screens */
+  .timeline-item .content {
+    padding: 15px 20px;
+  }
+
+  .contact-list li a {
+    font-size: 0.95rem; /* Slightly smaller text on mobile */
+  }
+}

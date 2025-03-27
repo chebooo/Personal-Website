@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastian - IT Engineer</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="icon"
+      href="assets/images/ab5ec66edc9bd12.png"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <div class="logo">
+          <a href="index.html">sebastian</a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <!-- Add more links here later if needed, e.g., Projects, Blog -->
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </nav>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn">🌙</button>
+        </div>
+      </header>
+
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <h2>About Me</h2>
+          <p>I'm Sebastian, IT Engineer and technology enthusiast.</p>
+        </div>
+        <!-- Add more sidebar sections if desired, e.g., Quick Links -->
+        <div class="sidebar-section">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="mailto:sebastianastalos@outlook.com">Contact</a></li>
+            <li>
+              <a href="https://github.com/chebooo" target="_blank">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="content">
+        <div class="intro-section">
+          <h1>Hey, I'm Sebastian!</h1>
+          <div class="intro-content">
+            <div class="profile-image">
+              <img
+                src="assets/images/ab5ec66edc9bd12.png"
+                alt="Sebastian's profile picture"
+              />
+            </div>
+            <div class="intro-text">
+              <p>
+                I'm an IT Engineer at High Speed Training, focused on PowerShell
+                scripting for Windows and Bash for macOS and Linux environments.
+              </p>
+              <p>
+                When I'm not working, I like logging movies into my letterboxd
+                account, playing video games and watching anime!
+              </p>
+              <div class="cta-buttons">
+                <a href="about.html" class="cta-button">More About Me</a>
+                <a href="mailto:sebastianastalos@outlook.com" class="cta-button"
+                  >Contact</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW: GitHub Activity Feed -->
+        <section class="home-section" id="github-activity">
+          <h2>Recent GitHub Activity</h2>
+          <p class="section-description">What I've been up to on GitHub.</p>
+          <div id="activity-feed" class="activity-list">
+            <!-- Activity items will be loaded here by JavaScript -->
+            <p>Loading activity...</p>
+          </div>
+          <a href="https://github.com/chebooo" target="_blank" class="see-all-link">View on GitHub →</a>
+        </section>
+      </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
